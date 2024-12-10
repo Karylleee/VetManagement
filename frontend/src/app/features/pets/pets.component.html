@@ -1,0 +1,38 @@
+<div class="page-container">
+    <div class="page-header">
+      <h1>Pets</h1>
+      <button mat-raised-button color="primary" (click)="openPetDialog()">
+        <mat-icon>add</mat-icon>
+        Add New Pet
+      </button>
+    </div>
+
+    <div class="search-container" *ngIf="isVet">
+      <mat-icon>search</mat-icon>
+      <input type="text" placeholder="Search pets..." (input)="filterPets($event)">
+    </div>
+
+    <div class="pets-grid">
+      <mat-card class="pet-card" *ngFor="let pet of filteredPets">
+        <div class="pet-info">
+          <div class="pet-header">
+            <h2>{{pet.name}}</h2>
+            <mat-chip-listbox>
+              <mat-chip>{{pet.species}}</mat-chip>
+            </mat-chip-listbox>
+          </div>
+          <p><strong>Breed:</strong> {{pet.breed}}</p>
+          <p><strong>Age:</strong> {{pet.age}} years</p>
+          <p *ngIf="isVet"><strong>Owner:</strong> {{pet.owner?.firstName}} {{pet.owner?.lastName}}</p>
+        </div>
+        <div class="pet-actions">
+          <button mat-icon-button color="accent" (click)="openPetDialog(pet)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deletePet(pet.id)" *ngIf="isVet">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>

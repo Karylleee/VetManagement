@@ -1,0 +1,115 @@
+.dialog-container {
+    padding: 24px;
+    background-color: #303030;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+  }
+
+  mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+    min-width: 400px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  ::ng-deep {
+    .mat-mdc-form-field {
+      .mdc-text-field--filled {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .mat-mdc-form-field-focus-overlay {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .mdc-floating-label {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .mat-mdc-input-element {
+        color: black !important;
+      }
+
+      input::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .mat-mdc-form-field-infix {
+        color: black;
+      }
+
+      .mat-mdc-select-value {
+        color: black;
+      }
+
+      .mat-mdc-select-arrow {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .icon-selection, .color-selection {
+    margin: 16px 0;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  mat-grid-tile {
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &.selected {
+      background-color: rgba(33, 150, 243, 0.3);
+      border: 2px solid #2196f3;
+    }
+  }
+
+  .icon-preview {
+    margin: 24px 0;
+    text-align: center;
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .preview-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      
+      mat-icon {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        color: white;
+      }
+    }
+  }
