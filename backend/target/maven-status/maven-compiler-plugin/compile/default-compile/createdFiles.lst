@@ -24,6 +24,7 @@ com/vet/system/dto/AppointmentDTO$ServiceDTO.class
 com/vet/system/config/RoleInitializer.class
 com/vet/system/security/jwt/JwtUtils.class
 com/vet/system/controller/OwnerController.class
+com/vet/system/model/VaccinationStatus.class
 com/vet/system/model/Pet.class
 com/vet/system/service/ServiceService.class
 com/vet/system/security/jwt/AuthTokenFilter.class
